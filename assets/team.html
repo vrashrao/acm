@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>
+        ACM SAHYADRI
+    </title>
+    <link rel="icon" href="./images/Untitled design (1).png" type="image/x-icon">
+
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/css/mdb.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nova+Square&display=swap" rel="stylesheet">
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/js/mdb.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+
+    <style>
+        body {
+          
+            line-height: 1.8;
+            color: black;
+            font-family: 'Nova Square';
+
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        h1 {
+            font-size: 24px;
+            text-transform: uppercase;
+            color: whitesmoke;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        h4 {
+            font-size: 15px;
+            line-height: 1.375em;
+            color: #0e080f;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+
+        .jumbotron {
+            background-color: white;
+            color: blue;
+            padding: 100px 25px;
+            font-family: 'Nova Square';
+        }
+
+
+
+        .container-fluid {
+            padding: 60px 50px;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+
+        }
+
+        .bg-grey {
+            background-color: blue;
+        }
+
+
+        @import url("https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;500&display=swap");
+
+        .social-icons {
+            padding: 0;
+            list-style: none;
+            margin: 1em;
+        }
+
+        .social-icons li {
+            display: inline-block;
+            margin: 0.15em;
+            position: relative;
+            font-size: 1em;
+        }
+
+        .social-icons i {
+            color: #fff;
+            position: absolute;
+            top: 0.95em;
+            left: 1.2em;
+            transition: all 265ms ease-out;
+        }
+
+        .social-icons a {
+            display: inline-block;
+        }
+
+        .social-icons a:before {
+            transform: scale(1);
+            -ms-transform: scale(1);
+            -webkit-transform: scale(1);
+            content: " ";
+            width: 45px;
+            height: 45px;
+            border-radius: 100%;
+            display: block;
+            background: linear-gradient(45deg, #2608ff, #f1e7f1);
+            transition: all 265ms ease-out;
+        }
+
+        .social-icons a:hover:before {
+            transform: scale(0);
+            transition: all 265ms ease-in;
+        }
+
+        .social-icons a:hover i {
+            transform: scale(2.2);
+            -ms-transform: scale(2.2);
+            -webkit-transform: scale(2.2);
+            color: #2608ff;
+            background: -webkit-linear-gradient(45deg, #2608ff, #f1e7f1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: all 265ms ease-in;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            margin-bottom: 0;
+            background-color: black;
+            z-index: 9999;
+            border: 0;
+            font-size: 12px !important;
+            line-height: 1.42857143 !important;
+            letter-spacing: 4px;
+            border-radius: 0;
+            font-family: 'Nova Square';
+        }
+
+        .navbar li a,
+        .navbar .navbar-brand {
+            color: #fff !important;
+        }
+
+        .navbar-nav li a:hover,
+        .navbar-nav li.active a {
+            color: #0e080f !important;
+            background-color: #fff !important;
+        }
+
+        .navbar-default .navbar-toggle {
+            border-color: transparent;
+            color: #fff !important;
+        }
+
+
+
+
+
+        td,
+        th {
+            padding: 11px;
+            color: white;
+        }
+
+        table th {
+            font-size: 1.4rem;
+            font-weight: 400;
+        }
+
+
+        .navbar-default .navbar-toggle .icon-bar {
+            background-color: blue;
+        }
+
+        .carousel-inner {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .card-cascade {
+            background: #f7f7f7;
+
+            padding: 5%;
+
+        }
+
+        .modal {
+            top: 50px;
+
+        }
+
+        .view-cascade.overlay {
+            text-align: -webkit-center;
+
+        }
+    </style>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <img src="./images/title logo.png" style="width: 65px;">
+
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="../index.html">HOME</a></li>
+                    <li><a href="event.html">EVENTS</a></li>
+                    <li><a href="team.html">TEAM</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="blog.html">BLOGS</a></li>
+
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+    <div id="rides" style="background: #2A81AD;">
+        <br>
+        <br>
+        <div style="text-align: center;">
+            <b>
+                <h1>OUR TEAM MEMBERS</h1>
+            </b>
+            <hr style="width:60%">
+            <br>
+
+        </div>
+
+        <div class="row">
+
+
+
+            <div class="col-sm-4" style="padding: 50px;">
+                <div class="card card-cascade">
+                    <div class="view view-cascade overlay">
+                        <img class="card-img-top" src="../assets/images/harisha.png" alt = "image"
+                            style="width: -webkit-fill-available;">
+                    </div>
+                    <hr>
+                    <div class=" card-body card-body-cascade text-center">
+                        <h4 class="card-title">Prof. HARISHA S</h4>
+                        <h6 class="font-weight-bold indigo-text py-2">PROFESSIONAL SUPPORT</h6>
+                        <ul class="social-icons">
+                            <li><a href="https://www.instagram.com/harisha.17/"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://in.linkedin.com/in/harisha-airbail-838b1462"><i class="fa fa-linkedin"></i></a></li>
+
+                        </ul>
+
+                        <button class="btn blue-gradient">CONTACT</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4" style="padding: 50px;">
+                <div class="card card-cascade">
+                    <div class="view view-cascade overlay">
+                        <img class="card-img-top" src="../assets/images/likith.png" alt = "image"
+                            style="width: -webkit-fill-available;">
+                    </div>
+                    <hr>
+                    <div class=" card-body card-body-cascade text-center">
+                        <h4 class="card-title"><strong>LIKITH R  KULAL</strong></h4>
+                        <h6 class="font-weight-bold indigo-text py-2">SENIOR LEAD</h6>
+                        <ul class="social-icons">
+                            <li><a href="https://instagram.com/lucifer_rk_"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://www.twitter.com/lucifer_rk"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://linkedin.com/likhith-rk"><i class="fa fa-linkedin"></i></a></li>
+
+                        </ul>
+
+
+                        <button class="btn blue-gradient">CONTACT</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4" style="padding: 50px;">
+                <div class="card card-cascade">
+                    <div class="view view-cascade overlay">
+                        <img class="card-img-top" src="../assets/images/dhanush.png" alt = "image"
+                            style="width: -webkit-fill-available;">
+                    </div>
+                    <hr>
+                    <div class="card-body card-body-cascade text-center">
+                        <h4 class="card-title"><strong>DHANUSH R</strong></h4>
+                        <h6 class="font-weight-bold indigo-text py-2">SENIOR LEAD</h6>
+                        <ul class="social-icons">
+                            <li><a href="https://www.instagram.com/dhanush_adoor"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://www.twitter.com/Dhanush24933312"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://linkedin.com/in/dhanush-r-b6b817177"><i class="fa fa-linkedin"></i></a></li>
+
+                        </ul>
+
+                        <button class="btn blue-gradient">CONTACT</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4" style="padding: 50px;">
+                <div class="card card-cascade">
+                    <div class="view view-cascade overlay">
+                        <img class="card-img-top" src="../assets/images/vineet.png" alt = "image"
+                            style="width: -webkit-fill-available;">
+                    </div>
+                    <hr>
+                    <div class="card-body card-body-cascade text-center">
+                        <h4 class="card-title"><strong>VINEET NAYAK S</strong></h4>
+                        <h6 class="font-weight-bold indigo-text py-2">CHAIRPERSON</h6>
+                        <ul class="social-icons">
+                            <li><a href="https://www.instagram.com/vineetnayak777/"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://twitter.com/vineetnayak777"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/vineetnayak777/"><i class="fa fa-linkedin"></i></a></li>
+
+                        </ul>
+
+                        <button class="btn blue-gradient">CONTACT</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4" style="padding: 50px;">
+                <div class="card card-cascade">
+                    <div class="view view-cascade overlay">
+                        <img class="card-img-top" src="../assets/images/vishwas.png" alt = "image"
+                            style="width: -webkit-fill-available;">
+                    </div>
+                    <hr>
+                    <div class="card-body card-body-cascade text-center">
+                        <h4 class="card-title"><strong>M VISHWAS KAMATH</strong></h4>
+                        <h6 class="font-weight-bold indigo-text py-2">VICE CHAIRPERSON</h6>
+                        <ul class="social-icons">
+                            <li><a href="https://www.instagram.com/vishwas_kamath/"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://twitter.com/Vishwaskamath3"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/mvishwaskamath"><i class="fa fa-linkedin"></i></a></li>
+
+                        </ul>
+
+                        <button class="btn blue-gradient">CONTACT</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4" style="padding: 50px;">
+                <div class="card card-cascade">
+                    <div class="view view-cascade overlay">
+                        <img class="card-img-top" src="../assets/images/samarth.png" alt = "image"
+                            style="width: -webkit-fill-available;">
+                    </div>
+                    <hr>
+                    <div class="card-body card-body-cascade text-center">
+                        <h4 class="card-title"><strong>K SAMARTH N KAMATH</strong></h4>
+                        <h6 class="font-weight-bold indigo-text py-2">SECRETARY</h6>
+                        <ul class="social-icons">
+                            <li><a href="https://instagram.com/kamath_samarth?igshid=busi47nfogwu"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://mobile.twitter.com/KSamarthNKamat2"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/kamathsamarth"><i class="fa fa-linkedin"></i></a></li>
+
+                        </ul>
+
+                        <button class="btn blue-gradient">CONTACT</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4" style="padding: 50px;">
+                <div class="card card-cascade">
+                    <div class="view view-cascade overlay">
+                        <img class="card-img-top" src="../assets/images/karthik.png" alt = "image"
+                            style="width: -webkit-fill-available;">
+                    </div>
+                    <hr>
+                    <div class="card-body card-body-cascade text-center">
+                        <h4 class="card-title"><strong>KARTHIK HEGDE</strong></h4>
+                        <h6 class="font-weight-bold indigo-text py-2">TREASURER</h6>
+                        <ul class="social-icons">
+                            <li><a href="https://www.instagram.com/_karthik18_//"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://twitter.com/karthikdinesh24/"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/karthikdinesh208//"><i class="fa fa-linkedin"></i></a></li>
+
+                        </ul>
+
+                        <button class="btn blue-gradient">CONTACT</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4" style="padding: 50px;">
+                <div class="card card-cascade">
+                    <div class="view view-cascade overlay">
+                        <img class="card-img-top" src="../assets/images/vrashank.png" alt = "image"
+                            style="width: -webkit-fill-available;">
+                    </div>
+                    <hr>
+                    <div class="card-body card-body-cascade text-center">
+                        <h4 class="card-title"><strong>VRASHANK RAO</strong></h4>
+                        <h6 class="font-weight-bold indigo-text py-2">WEB MASTER</h6>
+                        <ul class="social-icons">
+                            <li><a href="https://www.instagram.com/vrashankrao/?hl=en"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://mobile.twitter.com/RaoVrashank"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/vrashank-rao-m-44b37a168"><i class="fa fa-linkedin"></i></a></li>
+
+                        </ul>
+
+                        <button class="btn blue-gradient">CONTACT</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4" style="padding: 50px;">
+                <div class="card card-cascade">
+                    <div class="view view-cascade overlay">
+                        <img class="card-img-top" src="../assets/images/uttam.png" alt = "image"
+                            style="width: -webkit-fill-available;">
+                    </div>
+                    <hr>
+                    <div class="card-body card-body-cascade text-center">
+                        <h4 class="card-title"><strong>UTTAM KINI H</strong></h4>
+                        <h6 class="font-weight-bold indigo-text py-2">DESIGNER </h6>
+                        <ul class="social-icons">
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://twitter.com/furore_049"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/uttam-kini-692024166"><i class="fa fa-linkedin"></i></a></li>
+
+                        </ul>
+
+                        <button class="btn blue-gradient">CONTACT</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4" style="padding: 50px;">
+                <div class="card card-cascade">
+                    <div class="view view-cascade overlay">
+                        <img class="card-img-top" src="../assets/images/sushma.png" alt = "image"
+                            style="width: -webkit-fill-available;">
+                    </div>
+                    <hr>
+                    <div class="card-body card-body-cascade text-center">
+                        <h4 class="card-title"><strong>SUSHMA NAYAK</strong></h4>
+                        <h6 class="font-weight-bold indigo-text py-2">CORE MEMBER</h6>
+                        <ul class="social-icons">
+                            <li><a href="https://www.instagram.com/sushmaberkala/"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://twitter.com/Sushmaberkala?s=09"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/sushmanayak05/"><i class="fa fa-linkedin"></i></a></li>
+
+                        </ul>
+
+                        <button class="btn blue-gradient">CONTACT</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4" style="padding: 50px;">
+                <div class="card card-cascade">
+                    <div class="view view-cascade overlay">
+                        <img class="card-img-top" src="../assets/images/rovit.png" alt = "image"
+                            style="width: -webkit-fill-available;">
+                    </div>
+                    <hr>
+                    <div class="card-body card-body-cascade text-center">
+                        <h4 class="card-title"><strong>ROVIT FERNANDES</strong></h4>
+                        <h6 class="font-weight-bold indigo-text py-2">CORE MEMBER</h6>
+                        <ul class="social-icons">
+                            <li><a href="https://www.instagram.com/rovitfernandes"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://twitter.com/Rovit40636772"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/rovit-fernandes-b0b01b185"><i class="fa fa-linkedin"></i></a></li>
+
+                        </ul>
+
+                        <button class="btn blue-gradient">CONTACT</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4" style="padding: 50px;">
+                <div class="card card-cascade">
+                    <div class="view view-cascade overlay">
+                        <img class="card-img-top" src="../assets/images/sudarshan.png" alt = "image"
+                            style="width: -webkit-fill-available;">
+                    </div>
+                    <hr>
+                    <div class="card-body card-body-cascade text-center">
+                        <h4 class="card-title"><strong>SUDARSHAN </strong></h4>
+                        <h6 class="font-weight-bold indigo-text py-2">CORE MEMBER</h6>
+                        <ul class="social-icons">
+                            <li><a href="https://instagram.com/sudharshan_akshay"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://twitter.com/sudharshan_su"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/sudharshan-0230ab174"><i class="fa fa-linkedin"></i></a></li>
+
+                        </ul>
+
+                        <button class="btn blue-gradient">CONTACT</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4" style="padding: 50px;">
+                <div class="card card-cascade">
+                    <div class="view view-cascade overlay">
+                        <img class="card-img-top" src="../assets/images/trishar.jpeg" alt = "image"
+                            style="width: -webkit-fill-available;">
+                    </div>
+                    <hr>
+                    <div class="card-body card-body-cascade text-center">
+                        <h4 class="card-title"><strong>TRISHAR T S</strong></h4>
+                        <h6 class="font-weight-bold indigo-text py-2">MEMBER</h6>
+                        <ul class="social-icons">
+                            <li><a href="https://www.instagram.com/trishartsv/"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/trishar-s-09697b192"><i class="fa fa-linkedin"></i></a></li>
+
+                        </ul>
+
+                        <button class="btn blue-gradient">CONTACT</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4" style="padding: 50px;">
+                <div class="card card-cascade">
+                    <div class="view view-cascade overlay">
+                        <img class="card-img-top" src="../assets/images/shishir.png" alt = "image"
+                            style="width: -webkit-fill-available;">
+                    </div>
+                    <hr>
+                    <div class="card-body card-body-cascade text-center">
+                        <h4 class="card-title"><strong>SHISHIR</strong></h4>
+                        <h6 class="font-weight-bold indigo-text py-2">MEMBER</h6>
+                        <ul class="social-icons">
+                            <li><a href="https://www.instagram.com/shishiralva"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/shishir-alva-s-ab4519173"><i class="fa fa-linkedin"></i></a></li>
+
+                        </ul>
+
+                        <button class="btn blue-gradient">CONTACT</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4" style="padding: 50px;">
+                <div class="card card-cascade">
+                    <div class="view view-cascade overlay">
+                        <img class="card-img-top" src="../assets/images/thohif.png" alt = "image"
+                            style="width: -webkit-fill-available;">
+                    </div>
+                    <hr>
+                    <div class="card-body card-body-cascade text-center">
+                        <h4 class="card-title"><strong>MOHAMMED THOHIF</strong></h4>
+                        <h6 class="font-weight-bold indigo-text py-2">MEMBER</h6>
+                        <ul class="social-icons">
+                            <li><a href="https://www.instagram.com/thwahif09/"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/mohammed-thohif-1598b7195//"><i class="fa fa-linkedin"></i></a></li>
+
+                        </ul>
+
+                        <button class="btn blue-gradient">CONTACT</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+    <br>
+    <div class="footer" style="text-align: center;">
+        Made with ❤️ Follow us on !
+        <ul class="social-icons">
+            <li> <a href="https://github.com/vishwaskamath/Acm_Sahyadri_Website"> <i class="fa fa-github"></i> </a>
+            </li>
+            <li> <a href="https://www.facebook.com/acmsahyadri/"> <i class="fa fa-facebook"></i></a></li>
+            <li> <a href="http://www.twitter.com/AcmSahyadri"> <i class="fa fa-twitter"></i></a></li>
+            <li> <a href="https://www.youtube.com/channel/UC5EtaZ54RIvnqJMrEDAzcag"> <i class="fa fa-youtube"></i></a> </li>
+            <li><a href="http://linkedin.com/company/acm-sahyadri"> <i class="fa fa-linkedin"></i></a></li>
+            <li><a href="https://instagram.com/acm_sahyadri?igshid=1d8pmqhknfr8o"> <i class="fa fa-instagram"></i></a> </li>
+        </ul>
+
+    </div>
+    <br>
+
+
+
+
+
+
+</body>
+
+</html>
