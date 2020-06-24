@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/css/mdb.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nova+Square&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/js/mdb.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
@@ -258,6 +260,15 @@
             text-align: -webkit-center;
 
         }
+          .ml2 {
+  font-weight: 900;
+  font-size: 2.3em;
+}
+
+.ml2 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
     </style>
 </head>
 
@@ -296,7 +307,7 @@
         <br>
         <div style="text-align: center;">
             <b>
-                <h2>LIST OF ALL OUR EVENTS AND ACTIVITIES</h2>
+               <h2 class ="ml2">ACM-SAHYADRI CHAPTER</h2>
             </b>
           <hr style="width:60%">
 
@@ -497,6 +508,29 @@
          <script>
            AOS.init();
          </script>
+    
+         <script>
+     // Wrap every letter in a span
+var textWrapper = document.querySelector('.ml2');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: false})
+.add({
+  targets: '.ml2 .letter',
+  scale: [4,1],
+  opacity: [0,1],
+  translateZ: 0,
+  easing: "easeOutExpo",
+  duration: 950,
+  delay: (el, i) => 70*i
+}).add({
+  targets: '.ml2',
+  opacity: 1,
+  duration: 1000,
+  easing: "easeOutExpo",
+  delay: 1000
+});
+     </script>
 
 </body>
 
