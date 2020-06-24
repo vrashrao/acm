@@ -18,6 +18,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/css/mdb.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nova+Square&display=swap" rel="stylesheet">
     <script type="text/javascript"
@@ -199,6 +201,15 @@
             margin-left: 0;
             margin-right: 0;
         }
+        .ml2 {
+  font-weight: 900;
+  font-size: 3.5em;
+}
+
+.ml2 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
     </style>
 </head>
 
@@ -234,9 +245,7 @@
     <div style="text-align: center;">
         <b>
             <br>
-            <h1>
-                BLOGS WRITTEN BY OUR MEMBERS
-            </h1>
+            <h1 class="ml2">BLOGS WRITTEN BY US!</h1>
         </b>
     </div>
     <hr>
@@ -273,6 +282,28 @@
     </div>
     <br>
 
+ <script>
+     // Wrap every letter in a span
+var textWrapper = document.querySelector('.ml2');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: false})
+.add({
+  targets: '.ml2 .letter',
+  scale: [2,1],
+  opacity: [0,1],
+  translateZ: 0,
+  easing: "easeOutExpo",
+  duration: 950,
+  delay: (el, i) => 70*i
+}).add({
+  targets: '.ml2',
+  opacity: 1,
+  duration: 1000,
+  easing: "easeOutExpo",
+  delay: 1000
+});
+     </script>
 
 
 
