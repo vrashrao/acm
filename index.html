@@ -231,6 +231,15 @@
         * {
             box-sizing: border-box;
         }
+          .ml2 {
+  font-weight: 900;
+  font-size: 2.3em;
+}
+
+.ml2 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
     </style>
 </head>
 
@@ -282,7 +291,7 @@
 
     <div class="about" style="margin: 20px  20px; text-align: center;">
         <br>
-        <h2 style="margin-bottom:30px"> <b> ACM-SAHYADRI CHAPTER </b> </h2>
+        <h2 class ="ml2" style="margin-bottom:30px">ACM-SAHYADRI CHAPTER</h2>
         <hr>
         <div class="row">
             <div class="col-sm-6 data-aos="zoom-in" data-aos-offset="50">
@@ -445,11 +454,33 @@
             </li>
         </ul>
 
-    </div>>
+    </div>
     <br>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
      <script>
        AOS.init();
+     </script>
+      <script>
+     // Wrap every letter in a span
+var textWrapper = document.querySelector('.ml2');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: false})
+.add({
+  targets: '.ml2 .letter',
+  scale: [4,1],
+  opacity: [0,1],
+  translateZ: 0,
+  easing: "easeOutExpo",
+  duration: 950,
+  delay: (el, i) => 70*i
+}).add({
+  targets: '.ml2',
+  opacity: 1,
+  duration: 1000,
+  easing: "easeOutExpo",
+  delay: 1000
+});
      </script>
 
 </body>
