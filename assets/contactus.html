@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <title>ACM-SAHYADRI</title>
+  <link rel="icon" href="./images/ACM logo sahyadri black.png" type="image/x-icon">
+<meta charset="utf-8">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Comfortaa|Patua+One');
+  body,
+  input,
+  select,
+    textarea{
+      color: white;
+      font-family: 'Comfortaa', Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.5;
+
+    }
+
+.row{
+  width:100%;
+  margin-top:-.8%;
+  margin-left:0%;
+
+}
+
+    #contatti{
+  background-color:#03132d;
+  letter-spacing: 2px;
+
+  }
+#contatti a{
+  color: #fff;
+  text-decoration: none;
+}
+
+
+@media (max-width: 575.98px) {
+
+  #contatti{padding-bottom: 800px;}
+  #contatti .maps iframe{
+    width: 100%;
+    height: 450px;
+  }
+ }
+
+
+@media (min-width: 576px) {
+
+   #contatti{padding-bottom: 800px;}
+
+   #contatti .maps iframe{
+     width: 100%;
+     height: 450px;
+
+   }
+ }
+
+@media (min-width: 768px) {
+
+  #contatti{padding-bottom: 350px;}
+
+  #contatti .maps iframe{
+    width: 100%;
+    height: 850px;
+  }
+}
+
+@media (min-width: 992px) {
+  #contatti{padding-bottom: 200px;}
+
+   #contatti .maps iframe{
+     width: 100%;
+     height: 700px;
+   }
+}
+
+
+#author a{
+  color: #000;
+  text-decoration: none;
+  font-size:80%
+
+}
+.navbar {
+            margin-bottom: 0;
+            background-color: black;
+            z-index: 9999;
+            border: 0;
+            font-size: 12px !important;
+            line-height: 1.42857143 !important;
+            letter-spacing: 4px;
+            border-radius: 0;
+            font-family: 'Nova Square';
+
+
+        }
+
+        .navbar li a,
+        .navbar .navbar-brand {
+            color: #fff !important;
+        }
+
+        .navbar-nav li a:hover,
+        .navbar-nav li.active a {
+            color: #0e080f !important;
+            background-color: #fff !important;
+        }
+
+        .navbar-default .navbar-toggle {
+            border-color: transparent;
+            color: #fff !important;
+        }
+        .navbar-default .navbar-toggle .icon-bar {
+            background-color: #57a8d5;
+        }
+        .container{
+
+        width: 100%;
+
+        background-size: 100% 100%;
+        /*margin-top: -1.5vw;*/
+        margin-right: 0%;
+        margin-left: 0%;
+        margin-bottom: 0%;
+
+        background-repeat: no-repeat;
+        position: relative;
+        }
+        @media screen and (min-width: 900px) {
+          #map{
+            width:40%;
+            margin-top:4%;
+          }
+          }
+
+        }
+</style>
+  <body >
+<!--
+    <div class="bg-img">
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">ACM-SAHYADRI</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active">
+            <a href="index.html">Home</a></li>
+            <li>
+              <a  href="#">About ACM</a>
+             <ul class="dropdown-menu">
+                <li><a href="#">Predictive Analysis</a> </li>
+                <li><a href="doctor.html">Doctors</a></li>
+                <li><a href="#">Hospitals</a></li>
+                <li><a href="#">Fitness Centers</a></li>
+                <li><a href="yoga.html">Yoga Centers</a></li>
+                <li><a href="#">Medical Supplements</a></li>
+                <li><a href="#">Fitness Equipments</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Events</a></li>
+            <li><a href="Team.html">Team</a></li>
+            <li><a href="team.html">Blogs</a> </li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+          </ul>
+         <ul class="nav navbar-nav navbar-right">
+            <li><a href="signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="signin.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+
+        </div>
+      </div>
+
+    </nav>
+
+    </div>
+-->  <nav class="navbar navbar-default">
+      <div class="container">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+
+              <img src="./images/title logo.png" style="width: 65px;">
+
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav navbar-right">
+                  <li><a href="../index.html">HOME</a></li>
+                  <li><a href="event.html">EVENTS</a></li>
+                  <li><a href="team.html">TEAM</a></li>
+                  <li><a href="blog.html">BLOGS</a></li>
+                  <li><a href="#">CONTACT</a></li>
+
+
+
+
+              </ul>
+          </div>
+      </div>
+  </nav>
+    <div class="row" id="contatti">
+    <div class="container mt-5" >
+
+        <div class="row" style="height:500px;">
+          <div class="col-md-6 maps" id="map" >
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7779.209919046349!2d74.92022255717124!3d12.868772500810413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe93953598f53c53c!2sSahyadri%20College%20of%20Engineering%20%26%20Management!5e0!3m2!1skn!2sin!4v1583333893183!5m2!1skn!2sin"> frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+          <div class="col-md-6">
+          <!--  <h2 class="text-uppercase mt-3 font-weight-bold text-white">CONTACT US</h2>
+            <form action="">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control mt-2" placeholder="First Name" required>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control mt-2" placeholder="Last Name" required>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input type="email" class="form-control mt-2" placeholder="Email" required>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input type="number" class="form-control mt-2" placeholder="Phone Number" required>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-group">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Suggestions" rows="3" required></textarea>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <button class="btn btn-light" style="color:black" type="submit">SUBMIT</button>
+                </div>
+              </div>
+            </form>
+          -->
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfaALut5CiELIWEnLfp5GUOv1P6QfLndaEUbLLgP4C3i7C-DQ/viewform?embedded=true" width="100%" height="450" frameborder="0" marginheight="0" marginwidth="0" style="margin-top:5%;">Loading…</iframe>
+            <div class="text-white" style="margin-left:3%">
+            <h2 class="text-uppercase mt-4 font-weight-bold">MEET US!</h2>
+            <i class="fab fa-instagram"></i><a href="https://instagram.com/acm_sahyadri?igshid=1d8pmqhknfr8o">ACM-SAHYADRI</a><br>
+            <i class="fas fa-phone mt-3"></i> <a href="tel:+">+917019252847</a><br>
+            <i class="fas fa-phone mt-3"></i> <a href="tel:+">+916362564732</a><br>
+            <i class="fa fa-envelope mt-3"></i> <a href="mailto:acmsahyadri@gmail.com">acmsahyadri@gmail.com</a><br>
+
+
+            <div class="my-4">
+            <a href="https://www.facebook.com/acmsahyadri/"><i class="fab fa-facebook fa-3x pr-4"></i></a>
+            <a href="http://linkedin.com/company/acm-sahyadri"><i class="fab fa-linkedin fa-3x"></i></a>
+            <a href="https://instagram.com/acm_sahyadri?igshid=1d8pmqhknfr8o"><i class="fab fa-instagram fa-3x"></i></a>
+            <a href="https://www.youtube.com/channel/UC5EtaZ54RIvnqJMrEDAzcag"><i class="fab fa-youtube fa-3x"></i></a>
+            <a href="https://github.com/acmsahyadritech/acm"><i class="fab fa-github fa-3x"></i></a>
+
+            </div>
+            </div>
+          </div>
+
+        </div>
+    </div>
+    </div>
+
+    <div class="row text-center bg-success text-white" id="author">
+      <div class="col-12 mt-4 h4" style="height:1.5vh;">
+      <a style="font-size:102%" href="#">ACM-SAHYADRI &copy 2020</a>
+    </div>
+    </div>
+  </body>
+</html>
