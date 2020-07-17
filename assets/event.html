@@ -1,104 +1,154 @@
+
+
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" >
 <head>
-
-    <title>
-        ACM SAHYADRI
-    </title>
+  <meta charset="utf-8">
+  <title>
+      ACM SAHYADRI
+  </title>
   <link rel="icon" href="./images/ACM logo sahyadri black.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=m5926X_hrPd4ymTnqatUb-0oY55dUb4bLjpC3i0pRjL9jv1wV9HEeM2UdCU_lJ9sexquuDHn8eUVJUpxnhlMxw" charset="UTF-8"></script><script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=aKsdoh0hMkA9Y-mwKMmKNzitg_ZdTIrJ1s8GrLgB1TGeaiSe-ulHtX0BZKdsFpHaaMwQQYEitG5rx1B6WCGMXQ" charset="UTF-8"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/css/mdb.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nova+Square&display=swap" rel="stylesheet">
+  <script type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/js/mdb.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<style>
+  body {
 
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/css/mdb.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Nova+Square&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-
-    <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/js/mdb.min.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-    <style>
-        body {
-
-            line-height: 1.8;
-            color: black;
-            font-family: 'Nova Square';
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-
-        h1 {
-            font-size: 24px;
-            text-transform: uppercase;
-            color: #0e080f;
-            font-weight: 600;
-            margin-bottom: 30px;
-        }
-        #rides{
-          background-color: #092532;
-         } 
-        h4 {
-            font-size: 19px;
-            line-height: 1.375em;
-            color: #0e080f;
-            font-weight: 400;
-            margin-bottom: 30px;
-        }
-          h2{
-        color:white;
-
-      }
-      h3{
-        color:white;
-       
-        
-      }
-    @media (max-width:550px){
-        h3{
-       text-align:center;
-} 
-}
-@media (min-width:551px){
-        h3{
-       margin-left:37px;
-       text-align:justify;
-} 
+      line-height: 1.8;
+      color: black;
+      font-family: 'Nova Square';
+  }
+  html {
+  background: #f5f7f8;
+  font-family: system-ui;
+  -webkit-font-smoothing: antialiased;
+  padding: 20px 0;
 }
 
-        .jumbotron {
-            background-color: white;
-            color: blue;
-            padding: 100px 25px;
-            font-family: 'Nova Square';
-        }
+header {
+  width: 90%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.band {
+  width: 90%;
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+}
+@media (min-width: 30em) {
+  .band {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 60em) {
+  .band {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  background: white;
+  text-decoration: none;
+  color: #444;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  min-height: 100%;
+  position: relative;
+  top: 0;
+  -webkit-transition: all .1s ease-in;
+  transition: all .1s ease-in;
+  border-radius:1%;
+}
+.card:hover {
+  top: -2px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+.card article {
+  padding: 20px;
+  -webkit-box-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+}
+.card h1 {
+  font-size: 20px;
+  margin: 0;
+  color: #333;
+}
+.card p {
+  -webkit-box-flex: 1;
+          flex: 1;
+  line-height: 1.4;
+}
+.card span {
+  font-size: 13px;
+  font-weight: bold;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin: 2em 0 0 0;
+}
+.card .thumb {
+  padding-bottom: 60%;
+  background-size: cover;
+  background-position: center center;
+}
+.card .thumb1 {
+
+  background-size: cover;
+  background-position: center center;
+}
+.card .thumb2 {
+  padding-bottom: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+.card .thumb3 {
+  padding-bottom: 65%;
+  background-size: cover;
+  background-position: center center;
+}
+.card .thumb4 {
+  padding-bottom: 75%;
+  background-size: cover;
+  background-position: center center;
+}
 
 
-
-        .container-fluid {
-            padding: 60px 50px;
-            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-
-        }
-
-        .bg-grey {
-            background-color: blue;
-        }
-          .btn{
-          font-size:0.9em;
-        }
+@media (min-width: 60em) {
+  .item-1 {
+    grid-column: 1 / span 2;
+  }
+  .item-1 h1 {
+    font-size: 24px;
+  }
+}
 
         @import url("https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;500&display=swap");
 
@@ -159,58 +209,8 @@
         * {
             box-sizing: border-box;
         }
-
-        /* .fa {
-
-            font-size: 15px;
-            left: 20px;
-            top: 20px;
-            text-align: center;
-            text-decoration: none;
-
-        }
-
-        .fa:hover {
-            opacity: 0.4;
-        }
-
-        .fa-facebook {
-            padding: 10px;
-            background: white;
-            color: blue;
-        }
-
-        .fa-instagram {
-            padding: 10px;
-            background: white;
-            color: blue;
-        }
-
-        .fa-twitter {
-            padding: 10px;
-            background: white;
-            color: blue;
-        }
-
-        .fa-linkedin {
-            padding: 10px;
-            background: white;
-            color: blue;
-        }
-
-        .fa-youtube {
-            padding: 10px;
-            background: white;
-            color: blue;
-        }
-
-        .fa-github {
-            padding: 10px;
-            background: white;
-            color: blue;
-        } */
-
         .navbar {
+           margin-top:-20px;
             margin-bottom: 0;
             background-color: black;
             z-index: 9999;
@@ -238,30 +238,8 @@
             color: #fff !important;
         }
 
-
-
-
-
-        td,
-        th {
-            padding: 11px;
-            color: white;
-        }
-
-        table th {
-            font-size: 1.4rem;
-            font-weight: 400;
-        }
-
-
         .navbar-default .navbar-toggle .icon-bar {
             background-color: #57a8d5;
-        }
-
-        .carousel-inner {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
         }
 
         .row {
@@ -269,338 +247,493 @@
             margin-right: 0;
         }
 
-        .card-cascade {
-            background: #f7f7f7;
-
-            padding: 5%;
-
-        }
-
-        .modal {
-            top: 50px;
-
-        }
-
-        .view-cascade.overlay {
-            text-align: -webkit-center;
-
-        }
-          .ml2 {
+        .ml2 {
   font-weight: 900;
   font-size: 2em;
-}
+  color:white;
+  margin-top:-0.4%;
+ }
 
-.ml2 .letter {
+ .ml2 .letter {
   display: inline-block;
   line-height: 1em;
-}
-    </style>
+ }
+ .downs{
+   height:3%;
+   width:100%;
+   background-color:#092532;
+ }
+ .first {
+   height: 45px;
+   width: 45px;
+    background: url('https://media-exp1.licdn.com/dms/image/C4E03AQFyTX1LI4rHIA/profile-displayphoto-shrink_400_400/0?e=1600300800&v=beta&t=0JN0EeDVu5ieMTek-7PfQWIO0sFSwLpWgTPJw4_QU_o');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 89%;
+    left: 87%;
+    border-radius: 50%;
+    box-shadow: 3px 3px 7px rgba(0,0,0,0.5);
+  }
+  .second {
+     height: 45px;
+     width: 45px;
+     background: url('https://scontent.fblr4-2.fna.fbcdn.net/v/t1.0-0/p600x600/24775160_10155851947482456_5878448945288582057_n.jpg?_nc_cat=100&_nc_sid=174925&_nc_ohc=H5y4U8i3YisAX9sQ_G5&_nc_ht=scontent.fblr4-2.fna&_nc_tp=6&oh=317fccb6aad100a00461a1a0f17b1895&oe=5F369CF2');
+     background-size: cover;
+     background-position: center;
+     position: absolute;
+     top: 88%;
+     left: 77%;
+     border-radius: 80%;
+     box-shadow: 3px 3px 7px rgba(0,0,0,0.5);
+   }
+   .third{
+     height: 45px;
+     width: 45px;
+     background: url('https://media-exp1.licdn.com/dms/image/C5103AQGvcWqynv6xjg/profile-displayphoto-shrink_400_400/0?e=1600300800&v=beta&t=yU3V5L9-bh5oJeRCUAZ0g_K0OhoVg2yDNQUSC__1Sms');
+     background-size: cover;
+     background-position: center;
+     position: absolute;
+     top: 87%;
+     left: 77%;
+     border-radius: 80%;
+     box-shadow: 3px 3px 7px rgba(0,0,0,0.5);
+   }
+    .fourth {
+       height: 45px;
+       width: 45px;
+       background: url('https://media-exp1.licdn.com/dms/image/C5603AQGBzJxoqAFsOA/profile-displayphoto-shrink_200_200/0?e=1598486400&v=beta&t=WqWM9vJYsOO0V1LjeVzYgUDNouDjEyNO-hpgZ5FHvew');
+       background-size: cover;
+       background-position: center;
+       position: absolute;
+       top: 87%;
+       left: 77%;
+       border-radius: 80%;
+       box-shadow: 3px 3px 7px rgba(0,0,0,0.5);
+     }
+     .fifth{
+       height: 45px;
+       width: 45px;
+       background: url('https://media-exp1.licdn.com/dms/image/C5603AQH_40-5mJkzTw/profile-displayphoto-shrink_400_400/0?e=1600300800&v=beta&t=TPlcZinDz9nyjEUxrFvnpUYUdbwIWBibWZXlrYg6BXc');
+       background-size: cover;
+       background-position: center;
+       position: absolute;
+       top: 87%;
+       left: 77%;
+       border-radius: 80%;
+       box-shadow: 3px 3px 7px rgba(0,0,0,0.5);
+     }
+     .sixth{
+       height: 45px;
+       width: 45px;
+       background: url('https://media-exp1.licdn.com/dms/image/C5103AQGEwxiA8yk_Bw/profile-displayphoto-shrink_400_400/0?e=1600300800&v=beta&t=Gi4vFan42opaiJLyYEOuXQAwQbQnYNrw3GdXdYG3_Cw');
+       background-size: cover;
+       background-position: center;
+       position: absolute;
+       top: 87%;
+       left: 77%;
+       border-radius: 80%;
+       box-shadow: 3px 3px 7px rgba(0,0,0,0.5);
+     }
+     .seventh{
+       height: 45px;
+       width: 45px;
+       background: url('https://media-exp1.licdn.com/dms/image/C5603AQE3z0Pwx_T0NQ/profile-displayphoto-shrink_400_400/0?e=1600300800&v=beta&t=CPZba6rbB_Ts3TRjsUbC7fy2qUYg_svlUAMGSpstO8o');
+       background-size: cover;
+       background-position: center;
+       position: absolute;
+       top: 87%;
+       left: 77%;
+       border-radius: 80%;
+       box-shadow: 3px 3px 7px rgba(0,0,0,0.5);
+     }
+     .eight{
+       height: 45px;
+       width: 45px;
+       background: url('https://media-exp1.licdn.com/dms/image/C4D03AQEuHKzE4iTjTg/profile-displayphoto-shrink_400_400/0?e=1600300800&v=beta&t=qIFk9U-l03uelDTS3UaPMQ9VYzAXYR06lRBBSszMVxU');
+       background-size: cover;
+       background-position: center;
+       position: absolute;
+       top: 87%;
+       left: 77%;
+       border-radius: 80%;
+       box-shadow: 3px 3px 7px rgba(0,0,0,0.5);
+     }
+     .nineth {
+        height: 45px;
+        width: 45px;
+        background: url('../assets/images/aravind.jpg');
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        top: 87%;
+        left: 77%;
+        border-radius: 80%;
+        box-shadow: 3px 3px 7px rgba(0,0,0,0.5);
+      }
+      .tenth{
+        height: 45px;
+        width: 45px;
+        background: url('https://scontent.fblr4-2.fna.fbcdn.net/v/t1.0-9/87464547_105119987773783_3814972737525383168_n.jpg?_nc_cat=107&_nc_sid=09cbfe&_nc_ohc=1a7AdPX7VoMAX9yHWR1&_nc_ht=scontent.fblr4-2.fna&oh=d7980838bb955e58ae8679ddb52738b5&oe=5F37D451');
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        top: 87%;
+        left: 77%;
+        border-radius: 80%;
+        box-shadow: 3px 3px 7px rgba(0,0,0,0.5);
+      }
+      .eleventh{
+        height: 45px;
+        width: 45px;
+        background: url('https://media-exp1.licdn.com/dms/image/C5103AQG07bmHkAFqgg/profile-displayphoto-shrink_400_400/0?e=1600300800&v=beta&t=Cv7a6M6O0u6iWopJo1yQviYmoiJSly7lmUGo4cDAB30');
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        top: 87%;
+        left: 77%;
+        border-radius: 80%;
+        box-shadow: 3px 3px 7px rgba(0,0,0,0.5);
+      }
+      .tweveth{
+        height: 45px;
+        width: 45px;
+        background: url('https://media-exp1.licdn.com/dms/image/C5603AQGBzJxoqAFsOA/profile-displayphoto-shrink_200_200/0?e=1598486400&v=beta&t=WqWM9vJYsOO0V1LjeVzYgUDNouDjEyNO-hpgZ5FHvew');
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        top: 87%;
+        left: 77%;
+        border-radius: 80%;
+        box-shadow: 3px 3px 7px rgba(0,0,0,0.5);
+      }
+
+
+   @media (max-width:550px) {
+     .first{
+       position: absolute;
+       top: 86%;
+       left: 81%;
+     }
+     .second{
+       position: absolute;
+      top: 87%;
+      left: 81%;
+     }
+     .third .fourth .fifth .sixth .seventh .eighth .nineth .tenth .eleventh .tweveth{
+       position: absolute;
+      top: 87%;
+      left: 81.5%;
+     }
+
+
+  }
+   @media screen and (max-width:900px) and (min-width:560px) {
+     .first{
+       position: absolute;
+       top: 87%;
+       left: 71%;
+     }
+   }
+</style>
+
 </head>
+<body  id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
 
-    <nav class="navbar navbar-default">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+            <img src="./images/title logo.png" style="width: 65px;">
 
-                <img src="./images/title logo.png" style="width: 65px;">
-
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="../index.html">HOME</a></li>
-                    <li><a href="event.html">EVENTS</a></li>
-                    <li><a href="team.html">TEAM</a></li>
-                    <li><a href="blog.html">BLOGS</a></li>
-                    <li><a href="contactus.html">CONTACT</a></li>
-                </ul>
-            </div>
         </div>
-    </nav>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="event.html">EVENTS</a></li>
+                <li><a href="../assets/team.html">TEAM</a></li>
+                <li><a href="blog.html">BLOGS</a></li>
+                <li><a href="contactus.html">CONTACT</a></li>
 
 
 
 
+            </ul>
+        </div>
+    </div>
+</nav>
+<div style="background-color: #092532;">
 
-    <div id="rides">
+<div style="text-align: center;">
+    <b>
         <br>
- 
-        <div style="text-align: center;">
-            <b>
-               <h2 class ="ml2">EVENTS AND ACTIVITIES</h2>
-            </b>
-          <hr style="width:60%">
+        <h1 class="ml2">EVENTS AND ACTIVITIES</h1>
+    </b>
+</div>
+<hr style="width:80%">
+<div class="band">
+  <div class="item-1">
+    <a href="https://medium.com/@kamathsamarth/cow-a-computer-language-be6c1e7cc4fa" class="card">
+      <div class="thumb1">
+        <img src="../assets/images/ma.jpeg" style="width:100%;" alt="madhav">
+      </div>
+      <article>
+        <strong><h4 class="font-weight-bold;margin-top:-5%";> <i class="fa fa-calendar"></i> 18/7/2020 | <i class="fa fa-clock-o"></i> 04.00 PM IST</h4></strong>
+        <h5 style="font-family:sans-serif;margin-top:0%">(UPCOMING)</h5>
 
-                
-        </div>
+        <span>MADHAV BAHL</span>
+        <div class="first"></div>
 
-      <div class="row">
+      </article>
+    </a>
+  </div>
+  <div class="item-2">
+    <a href="https://www.instagram.com/p/CBLgBKVDAnX/" class="card">
+      <div class="thumb2" style="background-image: url(../assets/images/quotecode.jpeg);"></div>
+      <article>
+        <h1>QUOTE THE CODE</h1>
+        <strong><h5 class="font-weight-bold;margin-top:2%";><i class="fa fa-calendar"></i> LAST DATE: 30/7/2020</h5></strong>
+        <h5 style="font-family:sans-serif;margin-top:0%">(ONGOING)</h5>
 
-
-            <div>
-                <h3>UPCOMING EVENTS</h3>
-            </div>
-          <div class="col-sm-4" style="padding: 50px;" data-aos="flip-left">
-                <div class="card card-cascade">
-                    <div class="view view-cascade overlay">
-                        <img class="card-img-top" src="../activity/ma.jpg" style="width:95%;" alt="madhav"
-                            style="width: 95%;">
-                    </div>
-                    <div class="card-body card-body-cascade text-center">
-                        <h4 class="card-title"><strong>ACM - S MASTERCLASS</strong></h4>
-                        <h6 class="font-weight-bold indigo-text py-2">SPEAKER 09</h6>
-                        <a href="https://forms.gle/W3TXSTgcWPVYasyV7" style="color:white;"><button class="btn blue-gradient">REGISTER</button></a>
-                    </div>
-                </div>
-            </div>
-        </div> 
-        <div class="row">
-            <div>
-                
-                <h3>ONGOING EVENTS</h3>
-                
-            </div>
-            <div class="col-sm-4" style="padding: 50px;" data-aos="flip-left">
-                <div class="card card-cascade">
-                    <div class="view view-cascade overlay">
-                        <img class="card-img-top" src="../assets/images/quotecode.jpeg" style="width:95%;" alt="BIKE"
-                            style="width: 95%;">
-                    </div>
-                    <div class="card-body card-body-cascade text-center">
-                        <h4 class="card-title"><strong>ACM - S CONTEST</strong></h4>
-                        <h6 class="font-weight-bold indigo-text py-2">QOUTE THE CODE</h6>
-                        <a href="https://www.instagram.com/p/CBLgBKVDAnX/" style="color:white;"><button class="btn blue-gradient">MORE</button></a>
-                    </div>
-                </div>
-            </div>
-          </div>
-
-        <div class="row">
-            <div>
-                
-                <h3>COMPLETED EVENTS</h3>
-                
-            </div>
-             <div class="col-sm-4" style="padding: 50px;" data-aos="flip-left" data-aos-delay="100">
-                <div class="card card-cascade">
-                    <div class="view view-cascade overlay">
-                        <img class="card-img-top" src="../assets/images/rashmi.jpeg" alt="rashmi"
-                            style="width: 93%;">
-                    </div>
-                    <div class="card-body card-body-cascade text-center">
-                        <h4 class="card-title"><strong>ACM - S WEBINAR</strong></h4>
-                        <h6 class="font-weight-bold indigo-text py-2">SPEAKER 08</h6>
-                       <a href="https://drive.google.com/file/d/1amuH13_ex9cVqi1ZAxzKE1cdro4AA72I/view?usp=drivesdk" style="color:white;"><button class="btn blue-gradient">WATCH VIDEO</button></a>
-                    </div>
-                </div>
-            </div>
-             <div class="col-sm-4" style="padding: 50px;" data-aos="flip-left" data-aos-delay="100">
-                <div class="card card-cascade">
-                    <div class="view view-cascade overlay">
-                        <img class="card-img-top" src="../assets/images/deepak.jpeg" alt="deepak"
-                            style="width: 93%;">
-                    </div>
-                    <div class="card-body card-body-cascade text-center">
-                        <h4 class="card-title"><strong>ACM - S WEBINAR</strong></h4>
-                        <h6 class="font-weight-bold indigo-text py-2">SPEAKER 07</h6>
-                       <a href="https://drive.google.com/file/d/11rZJz3poRK6OCcom26pD7BvquiYZQ_bw/view?ts=5f059cd3" style="color:white;"><button class="btn blue-gradient">WATCH VIDEO</button></a>
-                    </div>
-                </div>
-            </div>
-  
-            <div class="col-sm-4" style="padding: 50px;" data-aos="flip-left" data-aos-delay="100">
-                <div class="card card-cascade">
-                    <div class="view view-cascade overlay">
-                        <img class="card-img-top" src="../assets/images/masterclass1.jpeg" alt="masterclass1"
-                            style="width: 83%;">
-                    </div>
-                    <div class="card-body card-body-cascade text-center">
-                        <h4 class="card-title"><strong>ACM - S MASTERCLASS</strong></h4>
-                        <h6 class="font-weight-bold indigo-text py-2">SPEAKER 06</h6>
-                        <a href="https://drive.google.com/file/d/18cVSTNR7KXWpSfsLXtRcZ6oN1heFiboG/view" style="color:white;"><button class="btn blue-gradient">WATCH VIDEO</button></a>
-                    </div>
-                </div>
-            </div>
-              <div class="col-sm-4" style="padding: 50px;" data-aos="flip-left" data-aos-delay="100">
-                <div class="card card-cascade">
-                    <div class="view view-cascade overlay">
-                        <img class="card-img-top" src="../assets/images/dinesh.jpeg" alt="dinesh pai"
-                            style="width: 93%;">
-                    </div>
-                    <div class="card-body card-body-cascade text-center">
-                        <h4 class="card-title"><strong>ACM - S WEBINAR</strong></h4>
-                        <h6 class="font-weight-bold indigo-text py-2">SPEAKER 05</h6>
-                        <a href="https://www.youtube.com/watch?v=RY4rab7dEyY" style="color:white;"><button class="btn blue-gradient">WATCH VIDEO</button></a>
-                    </div>
-                </div>
-            </div>
-               <div class="col-sm-4" style="padding: 50px;" data-aos="flip-left" data-aos-delay="100">
-                <div class="card card-cascade">
-                    <div class="view view-cascade overlay">
-                        <img class="card-img-top" src="../assets/images/speaker4.jpeg" alt="data science"
-                            style="width: 94%;">
-                    </div>
-                    <div class=" card-body card-body-cascade text-center">
-                        <h4 class="card-title"><strong>ACM - S WEBINAR </strong></h4>
-                        <h6 class="font-weight-bold indigo-text py-2">SPEAKER 04</h6>
+        <p style="margin-top:5%">quote the best code and be a winner! </p>
 
 
-                        <a href="https://drive.google.com/file/d/1bTwwFgvsxK8z3SA7WoIxSX9BpkvLTPbF/view" style="color:white;"><button class="btn blue-gradient">WATCH VIDEO</button></a>
+      </article>
+    </a>
+  </div>
+  <div class="item-4">
+    <a href="https://drive.google.com/file/d/1amuH13_ex9cVqi1ZAxzKE1cdro4AA72I/view?usp=drivesdk" class="card">
+      <div class="thumb3" style="background-image: url(../assets/images/rashmi.jpeg);"></div>
+      <article>
+        <h1>CAMPUS PLACEMENT</h1>
+        <strong><h5 class="font-weight-bold;margin-top:-5%";> <i class="fa fa-calendar"></i> 11/7/2020 | <i class="fa fa-clock-o"></i> 11.00 AM IST</h5></strong>
 
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4" style="padding: 50px;" data-aos="flip-left">
-                <div class="card card-cascade">
-                    <div class="view view-cascade overlay">
-                        <img class="card-img-top" src="../assets/images/prashant.jpeg" alt="BIKE"
-                            style="width: 94.5%;">
-                    </div>
-                    <div class="card-body card-body-cascade text-center">
-                        <h4 class="card-title"><strong>ACM - S WEBINAR</strong></h4>
-                        <h6 class="font-weight-bold indigo-text py-2">SPEAKER 03</h6>
-                        <a href="../moreinfo/speaker2.html" style="color:white;"><button class="btn blue-gradient">MORE</button></a>
-                    </div>
-                </div>
-            </div>
+        <p style="margin-top:5%">Click to watch the video and get the insights of On-Campus and Off-Campus Placements! </p>
+        <span>Mrs. RASHMI BHANDARY</span>
+        <div class="second"></div>
 
-            <div class="col-sm-4" style="padding: 50px;" data-aos="flip-left">
-                <div class="card card-cascade">
-                    <div class="view view-cascade overlay">
-                        <img class="card-img-top" src="../assets/images/speaker1.jpeg" alt="BIKE" style="width: 94.5%;">
-                    </div>
-                    <div class="card-body card-body-cascade text-center">
-                        <h4 class="card-title"><strong>ACM - S WEBINAR</strong></h4>
-                        <h6 class="font-weight-bold indigo-text py-2">SPEAKER 02</h6>
-                        <a href="https://www.youtube.com/watch?v=p46dD0Mxnyc&t=107s" style="color:white;"><button class="btn blue-gradient">WATCH VIDEO</button></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-4" style="padding: 50px;" data-aos="flip-left">
-                <div class="card card-cascade">
-                    <div class="view view-cascade overlay">
-                        <img class="card-img-top" src="../assets/images/acmp.jpeg" alt="BIKE" style="width: 95%;">
-                    </div>
-                    <div class=" card-body card-body-cascade text-center">
-                        <h4 class="card-title"><strong>ACM WEBINAR</strong></h4>
-                        <h6 class="font-weight-bold indigo-text py-2">SPEAKER 01</h6>
-                        <a href="https://www.youtube.com/watch?v=44fTOE7uoOI" style="color:white;"><button class="btn blue-gradient">WATCH VIDEO</button></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-4" style="padding: 50px;" data-aos="flip-left">
-                <div class="card card-cascade">
-                    <div class="view view-cascade overlay">
-                        <img class="card-img-top" src="../assets/images/acmnitk.png" alt="acmnitk"
-                            style="width: 280px;height:185px;">
-                    </div>
-                    <div class="card-body card-body-cascade text-center">
-                        <h4 class="card-title"><strong>ACM MEETUP</strong></h4>
-                        <h6 class="font-weight-bold indigo-text py-2">MEETUP 02</h6>
-                        <a href="../moreinfo/acmmeetup.html" style="color:white;"><button class="btn blue-gradient">MORE</button></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-4" style="padding: 50px;" data-aos="flip-left">
-                <div class="card card-cascade">
-                    <div class="view view-cascade overlay">
-                        <img class="card-img-top" src="../assets/images/ccc.jpg" style=" width : 270px; height: 180px;">
-                    </div>
-                    <div class="card-body card-body-cascade text-center">
-                        <h4 class="card-title"><strong>ACM TALKS</strong></h4>
-                        <h6 class="font-weight-bold indigo-text py-2">CYBER SAFE CAMPUS</h6>
-                        <a href="https://www.mangalorean.com/workshop-on-cyber-safe-campus-held-at-sahyadri-college/" style="color:white;"><button class="btn blue-gradient">MORE</button></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-4" style="padding: 50px;" data-aos="flip-left">
-                <div class="card card-cascade">
-                    <div class="view view-cascade overlay">
-                        <img class="card-img-top" src="../assets/images/slide2.jpeg" alt="meetup1" style="width: 270px">
-                    </div>
-                    <div class="card-body card-body-cascade text-center">
-                        <h4 class="card-title"><strong>ACM MEETUP</strong></h4>
-                        <h6 class="font-weight-bold indigo-text py-2">MEETUP 01</h6>
-                        <a href="https://www.instagram.com/p/B3hPLk1HnvX/" style="color:white;"><button class="btn blue-gradient">MORE</button></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-4" style="padding: 50px;" data-aos="flip-left">
-                <div class="card card-cascade">
-                    <div class="view view-cascade overlay">
-                        <img class="card-img-top" src="../assets/images/inaugration.jpeg" alt="inaugration"
-                            style="width: 270px ">
-                    </div>
-                    <div class="card-body card-body-cascade text-center">
-                        <h4 class="card-title"><strong>ACM LAUNCH</strong></h4>
-                        <h6 class="font-weight-bold indigo-text py-2">INAUGRATION & GUEST TALK</h6>
-                        <a href="https://www.instagram.com/p/B3hPqBfHA5l/" style="color:white;"><button class="btn blue-gradient">MORE</button></a>
-                    </div>
-                </div>
-            </div>
+      </article>
+    </a>
+  </div>
+  <div class="item-3">
+    <a href="https://drive.google.com/file/d/11rZJz3poRK6OCcom26pD7BvquiYZQ_bw/view?ts=5f059cd3" class="card">
+      <div class="thumb3" style="background-image: url(../assets/images/deepak.jpeg);"></div>
+      <article>
+        <h1>TELECOMMUNICATION INDUSTRY</h1>
+        <strong><h5 class="font-weight-bold;margin-top:2%";><i class="fa fa-calendar"></i> 4/7/2020 | <i class="fa fa-clock-o"></i> 11.00 AM IST</h5></strong>
 
 
-        </div>
-    </div>
-     <br>
-     <div class="footer" style="text-align: center;">
-        Made with ❤️ Follow us on !
-        <ul class="social-icons">
-            <li> <a href="https://github.com/acmsahyadritech/"> <i class="fa fa-github"></i> </a>
-            </li>
-            <li> <a href="https://www.facebook.com/acmsahyadri/"> <i class="fa fa-facebook"></i></a></li>
-            <li> <a href="http://www.twitter.com/AcmSahyadri"> <i class="fa fa-twitter"></i></a></li>
-            <li> <a href="https://www.youtube.com/channel/UC5EtaZ54RIvnqJMrEDAzcag"> <i class="fa fa-youtube"></i></a>
-            </li>
-            <li><a href="http://linkedin.com/company/acm-sahyadri"> <i class="fa fa-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/acm_sahyadri?igshid=1d8pmqhknfr8o"> <i class="fa fa-instagram"></i></a>
-            </li>
-        </ul>
+        <p style="margin-top:5%">Click to watch the video and get the insights of Telecommunication!</p>
+       <span>DEEPAK TALLUR</span>
+        <div class="third"></div>
 
-    </div>
-    <br>
 
-    <!--for animation-->
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-         <script>
-           AOS.init();
-         </script>
-    
-         <script>
-     // Wrap every letter in a span
+      </article>
+    </a>
+  </div>
+  <div class="item-3">
+    <a href="https://drive.google.com/file/d/18cVSTNR7KXWpSfsLXtRcZ6oN1heFiboG/view" class="card">
+      <div class="thumb4" style="background-image: url(../assets/images/masterclass1.jpeg);"></div>
+      <article>
+        <h1>DATA SCIENCE CAREER</h1>
+        <strong><h5 class="font-weight-bold;margin-top:2%";><i class="fa fa-calendar"></i> 29/6/2020 | <i class="fa fa-clock-o"></i> 02.00 PM IST</h5></strong>
+
+
+        <p style="margin-top:5%">Click to watch the video and get the insights of Data Science career!</p>
+       <span>BHARANI KUMAR</span>
+        <div class="fourth"></div>
+
+
+      </article>
+    </a>
+  </div>
+  <div class="item-3">
+    <a href="https://www.youtube.com/watch?v=RY4rab7dEyY" class="card">
+      <div class="thumb3" style="background-image: url(../assets/images/dinesh.jpeg);"></div>
+      <article>
+        <h1>NETWORKING AND NEGOTIATION</h1>
+        <strong><h5 class="font-weight-bold;margin-top:2%";><i class="fa fa-calendar"></i> 28/6/2020 | <i class="fa fa-clock-o"></i> 11.00 AM IST</h5></strong>
+
+
+        <p style="margin-top:5%">Click to watch the video and get the insights of Networking and Negotiation!</p>
+       <span>DINESH PAI</span>
+        <div class="fifth"></div>
+
+
+      </article>
+    </a>
+  </div>
+  <div class="item-3">
+    <a href="https://drive.google.com/file/d/1bTwwFgvsxK8z3SA7WoIxSX9BpkvLTPbF/view" class="card">
+      <div class="thumb3" style="background-image: url(../assets/images/speaker4.jpeg);"></div>
+      <article>
+        <h1>DATA SCIENCE PREPARATION</h1>
+        <strong><h5 class="font-weight-bold;margin-top:2%";><i class="fa fa-calendar"></i> 27/6/2020 | <i class="fa fa-clock-o"></i> 11.00 AM IST</h5></strong>
+
+
+        <p style="margin-top:5%">Click to watch the video and get the insights of steps to become a Data Science!</p>
+       <span>NITIN KAMAL</span>
+        <div class="sixth"></div>
+
+
+      </article>
+    </a>
+  </div>
+  <div class="item-3">
+    <a href="../moreinfo/speaker2.html" class="card">
+      <div class="thumb3" style="background-image: url(../assets/images/prashant.jpeg);"></div>
+      <article>
+        <h1>IDEATION AND PROTOTYPING</h1>
+        <strong><h5 class="font-weight-bold;margin-top:2%";><i class="fa fa-calendar"></i> 21/6/2020 | <i class="fa fa-clock-o"></i> 12.00 PM IST</h5></strong>
+
+
+        <p style="margin-top:5%">Click to know more about the Speaker!</p>
+       <span>PRASHANTH SHENOY</span>
+        <div class="seventh"></div>
+
+
+      </article>
+    </a>
+  </div>
+  <div class="item-3">
+    <a href="https://www.youtube.com/watch?v=p46dD0Mxnyc&t=107s" class="card">
+      <div class="thumb3" style="background-image: url(../assets/images/speaker1.jpeg);"></div>
+      <article>
+        <h1>ENTREPRENEURSHIP 101</h1>
+        <strong><h5 class="font-weight-bold;margin-top:2%";><i class="fa fa-calendar"></i> 14/6/2020 | <i class="fa fa-clock-o"></i> 11.00 AM IST</h5></strong>
+
+
+        <p style="margin-top:5%">Click to watch the video and get the insights of Entrepreneurship!</p>
+       <span>ANUBHA MANESHWAR</span>
+        <div class="eight"></div>
+
+
+      </article>
+    </a>
+  </div>
+
+  <div class="item-4">
+    <a href="https://www.youtube.com/watch?v=44fTOE7uoOI" class="card">
+      <div class="thumb3" style="background-image: url(../assets/images/acmp.jpeg);"></div>
+      <article>
+        <h1>COMPETITIVE PROGRAMMING</h1>
+        <strong><h5 class="font-weight-bold;margin-top:2%";><i class="fa fa-calendar"></i> 13/6/2020 | <i class="fa fa-clock-o"></i> 12.00 PM IST</h5></strong>
+
+        <p style="margin-top:5%">Click to watch the video and get the insights of Competitve Programming problems!</p>
+        <span>ARAVIND B</span>
+        <div class="nineth"></div>
+
+      </article>
+    </a>
+  </div>
+  <div class="item-4">
+    <a href="../moreinfo/acmmeetup.html" class="card">
+      <div class="thumb3" style="background-image: url(../assets/images/acmnitk.png);"></div>
+      <article>
+        <h1>ACM MEETUP (NITK)</h1>
+        <strong><h5 class="font-weight-bold;margin-top:2%";><i class="fa fa-calendar"></i> 26/10/2019 | <i class="fa fa-clock-o"></i> 10.00 AM IST</h5></strong>
+
+        <p style="margin-top:5%">Click to know about the event!</p>
+
+
+      </article>
+    </a>
+  </div>
+  <div class="item-4">
+    <a href="https://www.mangalorean.com/workshop-on-cyber-safe-campus-held-at-sahyadri-college/" class="card">
+      <div class="thumb3" style="background-image: url(../assets/images/ccc.jpg);"></div>
+      <article>
+        <h1>CYBER SAFE CAMPUS</h1>
+        <strong><h5 class="font-weight-bold;margin-top:2%";><i class="fa fa-calendar"></i> 26/10/2019 | <i class="fa fa-clock-o"></i> 10.00 AM IST</h5></strong>
+
+        <p style="margin-top:5%">Click to know about the event!</p>
+        <span>Dr. ANANTH PRABHU G</span>
+        <div class="tenth"></div>
+
+      </article>
+    </a>
+  </div>
+  <div class="item-4">
+    <a href="https://www.instagram.com/p/B3hPLk1HnvX/" class="card">
+      <div class="thumb3" style="background-image: url(../assets/images/slide2.jpeg);"></div>
+      <article>
+        <h1>OPPORTUNITIES IN ACM</h1>
+        <strong><h5 class="font-weight-bold;margin-top:2%";><i class="fa fa-calendar"></i> 11/10/2019 | <i class="fa fa-clock-o"></i> 03.00 PM IST</h5></strong>
+
+        <p style="margin-top:5%">Click to know about the event!</p>
+        <span>SAMYUKTHA PRABHU</span>
+        <div class="eleventh"></div>
+
+      </article>
+    </a>
+  </div>
+  <div class="item-4">
+    <a href="https://www.instagram.com/p/B3hQFq2ncn4/" class="card">
+      <div class="thumb3" style="background-image: url(../assets/images/inaugration.jpeg);"></div>
+      <article>
+        <h1>ACM LAUNCH</h1>
+        <strong><h5 class="font-weight-bold;margin-top:2%";><i class="fa fa-calendar"></i> 11/10/2019 | <i class="fa fa-clock-o"></i> 03.00 PM IST</h5></strong>
+
+        <p style="margin-top:5%">Click to know about the event!</p>
+
+
+      </article>
+    </a>
+  </div>
+
+
+</div>
+</div>
+
+<div class="downs">
+.
+</div>
+
+ <div class="footer" style="text-align: center;margin-top:2%">
+    Made with ❤️ Follow us on !
+    <ul class="social-icons">
+        <li> <a href="https://github.com/acmsahyadritech/"> <i class="fa fa-github"></i> </a>
+        </li>
+        <li> <a href="https://www.facebook.com/acmsahyadri/"> <i class="fa fa-facebook"></i></a></li>
+        <li> <a href="http://www.twitter.com/AcmSahyadri"> <i class="fa fa-twitter"></i></a></li>
+        <li> <a href="https://www.youtube.com/channel/UC5EtaZ54RIvnqJMrEDAzcag"> <i class="fa fa-youtube"></i></a>
+        </li>
+        <li><a href="http://linkedin.com/company/acm-sahyadri"> <i class="fa fa-linkedin"></i></a></li>
+        <li><a href="https://instagram.com/acm_sahyadri?igshid=1d8pmqhknfr8o"> <i class="fa fa-instagram"></i></a>
+        </li>
+    </ul>
+
+</div>
+
+
+<script>
+ // Wrap every letter in a span
 var textWrapper = document.querySelector('.ml2');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
 anime.timeline({loop: false})
 .add({
-  targets: '.ml2 .letter',
-  scale: [4,1],
-  opacity: [0,1],
-  translateZ: 0,
-  easing: "easeOutExpo",
-  duration: 950,
-  delay: (el, i) => 70*i
+targets: '.ml2 .letter',
+scale: [2,1],
+opacity: [0,1],
+translateZ: 0,
+easing: "easeOutExpo",
+duration: 950,
+delay: (el, i) => 70*i
 }).add({
-  targets: '.ml2',
-  opacity: 1,
-  duration: 1000,
-  easing: "easeOutExpo",
-  delay: 1000
+targets: '.ml2',
+opacity: 1,
+duration: 1000,
+easing: "easeOutExpo",
+delay: 1000
 });
-     </script>
+ </script>
+
 
 </body>
-
 </html>
